@@ -56,10 +56,14 @@ public class HenMechanics : MonoBehaviour
                     Destroy(newChick);
                     CounterUI.GetComponent<CounterUI>().chickCount--;
 
-                    Instantiate(Hen, randomPosition, Quaternion.identity);
+                    GameObject newHen = Instantiate(Hen, randomPosition, Quaternion.identity);
                     CounterUI.GetComponent<CounterUI>().henCount++;
                     yield return new WaitForSeconds(30);
                     yield return StartCoroutine(Eggen());
+
+                    yield return new WaitForSeconds(10);
+                    Destroy(newHen);
+                    CounterUI.GetComponent<CounterUI>().henCount--;
                 }
                 else
                 {
