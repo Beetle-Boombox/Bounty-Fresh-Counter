@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CounterUI : MonoBehaviour
 {
@@ -24,4 +25,5 @@ public class CounterUI : MonoBehaviour
         henCounter.text = henCount.ToString();    
         roosterCounter.text = roosterCount.ToString();
     }
+
 }
